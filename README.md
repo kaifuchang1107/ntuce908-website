@@ -20,7 +20,7 @@ ntuce908-website/
 │  ├─ pi.json            老師簡介、研究興趣、教授課程
 │  ├─ research.json      四大研究主題
 │  ├─ members.json       成員（staff / student / alumni）
-│  ├─ publications.json  期刊論文 40 篇
+│  ├─ publications.json  期刊論文 42 篇
 │  └─ news.json          最新消息
 ├─ assets/
 │  ├─ css/style.css      版面樣式
@@ -32,6 +32,16 @@ ntuce908-website/
 ```
 
 ---
+
+## 本機預覽
+
+網頁用 `fetch()` 讀取 JSON，**直接雙擊 HTML 檔會無法載入內容**，必須用本機伺服器：
+
+```bash
+cd ntuce908-website && python -m http.server 4173
+```
+
+然後開瀏覽器到 <http://localhost:4173>。
 
 ## 怎麼改內容
 
@@ -130,4 +140,4 @@ Build command 留空、Output directory 填 `/` → Deploy。
 ## 內容來源
 
 成員與論文資料由舊站 `ntuce908.weebly.com` 於 2026-09-02 擷取轉換：
-論文 40 篇（2004–2026，含 DOI 連結）、成員 16 位（含照片）。
+論文 42 篇（2004–2026，含 DOI 連結）、成員 16 位（含照片）。
