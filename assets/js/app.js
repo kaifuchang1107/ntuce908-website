@@ -189,7 +189,6 @@ const pages = {};
 pages.index = async () => {
   const [site, research, pubs, news] = await Promise.all(
     ['site', 'research', 'publications', 'news'].map(n => load(n)));
-  const members = await load('members');
 
   const hero = document.querySelector('.hero');
   hero.style.backgroundImage = `url("${site.hero_image}")`;
@@ -216,17 +215,6 @@ pages.index = async () => {
               <a class="more" href="research.html#${esc(r.id)}">${esc(t('read_more'))}</a>
             </div>
           </article>`).join('')}
-      </div>
-    </div>`;
-
-  const years = pubs.map(p => p.year).filter(Boolean);
-  document.querySelector('#stats').innerHTML = `
-    <div class="wrap">
-      <div class="stats">
-        <div class="stat"><strong>${pubs.length}</strong><span>${esc(t('nav_pubs'))}</span></div>
-        <div class="stat"><strong>${research.length}</strong><span>${esc(t('research_title'))}</span></div>
-        <div class="stat"><strong>${members.filter(m => m.group !== 'alumni').length}</strong><span>${esc(t('nav_members'))}</span></div>
-        <div class="stat"><strong>${Math.min(...years)}–${Math.max(...years)}</strong><span>${esc(t('years_active'))}</span></div>
       </div>
     </div>`;
 

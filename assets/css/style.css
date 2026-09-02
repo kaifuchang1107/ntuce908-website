@@ -236,11 +236,6 @@ mark { background: #fdf0c8; color: inherit; padding: 0 1px; }
 .news-item h3 { margin: 0 0 4px; font-size: 16px; color: var(--green-900); }
 .news-item p { margin: 0; font-size: 14.5px; color: var(--ink-soft); }
 
-/* ---------- stats ---------- */
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; text-align: center; }
-.stat strong { display: block; font-size: 34px; color: var(--green-700); line-height: 1.2; font-variant-numeric: tabular-nums; }
-.stat span { font-size: 13.5px; color: var(--ink-faint); }
-
 /* ---------- footer ---------- */
 .site-footer { background: var(--green-900); color: rgba(255, 255, 255, .78); padding: 48px 0 28px; font-size: 14px; }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 32px; }
