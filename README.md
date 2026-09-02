@@ -6,8 +6,7 @@
 所有內容都放在 `content/` 的 JSON 檔，網頁載入時讀取並渲染，中英雙語即時切換。
 
 ---
-
-## 1. 專案結構
+專案結構
 
 ```
 ntuce908-website/
@@ -34,19 +33,7 @@ ntuce908-website/
 
 ---
 
-## 2. 本機預覽
-
-網頁用 `fetch()` 讀取 JSON，**直接雙擊 HTML 檔會無法載入內容**，必須用本機伺服器：
-
-```bash
-cd ntuce908-website && python -m http.server 4173
-```
-
-然後開瀏覽器到 <http://localhost:4173>。
-
----
-
-## 3. 怎麼改內容
+## 怎麼改內容
 
 ### 方式 A：後台網頁（老師與學生都適用，不用碰程式）
 
@@ -59,21 +46,21 @@ cd ntuce908-website && python -m http.server 4173
 ### 方式 B：直接改 JSON（自己維護最快）
 
 打開 `content/` 裡對應的檔案編輯即可。所有欄位都是 `_zh` / `_en` 成對：
-
+範例：
 ```jsonc
 // content/members.json
 {
   "people": [
     {
       "group": "student",          // staff（研究人員）/ student（在學）/ alumni（校友）
-      "name_zh": "張凱富",
+      "name_zh": "張凱傅",
       "name_en": "Kai-Fu Chang",
       "role_zh": "碩士生",
       "role_en": "Master student",
-      "topic_zh": "魚道最佳化與生態水理",
+      "topic_zh": "魚道",
       "topic_en": "Fishway optimization and eco-hydraulics",
       "education": ["B.S., Hydraulic and Ocean Engineering, National Cheng Kung University, 2025"],
-      "hometown_zh": "新北",
+      "hometown_zh": "台中",
       "hometown_en": "New Taipei, Taiwan",
       "grad_year": 2027,           // 用來排序，數字越大越前面
       "photo": "assets/img/people/kai-fu-chang.jpg",
@@ -114,10 +101,6 @@ git push -u origin main
 Cloudflare 後台 → Workers & Pages → Create → Pages → 連結上面的 GitHub 倉庫 →
 Build command 留空、Output directory 填 `/` → Deploy。
 
-### 台大計中網頁空間
-
-把整個資料夾用 FTP/SFTP 丟上去即可，不需要任何伺服器端設定。
-（此方式無法使用第 5 節的後台，內容要用方式 B 直接改 JSON。）
 
 ---
 
