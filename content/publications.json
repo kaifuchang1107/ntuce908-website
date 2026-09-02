@@ -2,6 +2,22 @@
   "publications": [
     {
       "year": 2026,
+      "authors": "Hsu, Y.-W., Shih, S.-S.*",
+      "title": "A hybrid white-box emergy nexus model for endogenous unit emergy value derivation in urban water, energy, and socioeconomic systems",
+      "journal": "Sustainable Cities and Society",
+      "detail": "149, 107835",
+      "link": "https://doi.org/10.1016/j.scs.2026.107835"
+    },
+    {
+      "year": 2026,
+      "authors": "Shih, S.-S.*, Liang, H.-Y., Huang, Z.-Z.",
+      "title": "Long-term morphodynamic evolution of estuarine tidal flats and creeks under mangrove colonization: an improved 2DV model with vegetation–obstacle representation",
+      "journal": "Estuarine, Coastal and Shelf Science",
+      "detail": "342, 110181",
+      "link": "https://doi.org/10.1016/j.ecss.2026.110181"
+    },
+    {
+      "year": 2026,
       "authors": "Shih, S.-S.*, Hsu, Y.-W., Ning, J.-H., Hung, J.-H.",
       "title": "Enhancing run-of-river hydropower capacity assessment through integrated time series flow regime modeling and continuous wavelet transform analysis",
       "journal": "Journal of Environmental Management",
@@ -14,15 +30,15 @@
       "title": "A nexus-based emergy modeling framework for elucidating energy and material flows of macrophytes in a mountain wetland ecosystem",
       "journal": "Journal of Environmental Management",
       "detail": "396, 128049",
-      "link": "https://www.sciencedirect.com/science/article/pii/S0301479725040253?dgcid=author"
+      "link": "https://doi.org/10.1016/j.jenvman.2025.128049"
     },
     {
       "year": 2025,
       "authors": "Shih, S.-S.*, Li, Y.-H., Huang, Z.-Z.",
       "title": "Estuarine long-residence and high-concentration fine sediments induced by reservoir silt discharge during typhoon events",
       "journal": "Estuarine, Coastal and Shelf Science",
-      "detail": "324(15), 109842",
-      "link": "https://www.sciencedirect.com/science/article/pii/S0272771425003609?via%3Dihub"
+      "detail": "324, 109482",
+      "link": "https://doi.org/10.1016/j.ecss.2025.109482"
     },
     {
       "year": 2024,
@@ -30,7 +46,7 @@
       "title": "High-accuracy and low-disturbance approach for identifying surface water and groundwater interactions in wetlands",
       "journal": "Journal of Hydrology",
       "detail": "643, 132032",
-      "link": "https://www.sciencedirect.com/science/article/pii/S0022169424014288"
+      "link": "https://doi.org/10.1016/j.jhydrol.2024.132032"
     },
     {
       "year": 2024,
@@ -38,7 +54,7 @@
       "title": "Eco-friendly dredging methods of changing fluvial landforms for enhancing hydraulic habitat quality and river corridor continuum",
       "journal": "Science of The Total Environment",
       "detail": "936, 173439",
-      "link": "https://www.sciencedirect.com/science/article/pii/S0048969724035861"
+      "link": "https://doi.org/10.1016/j.scitotenv.2024.173439"
     },
     {
       "year": 2023,
@@ -46,7 +62,7 @@
       "title": "Time-series-based habitat model development for surface water management on endangered aquatic plant Isoetes taiwanensis conservation in mountain wetlands",
       "journal": "Ecological Indicators",
       "detail": "154, 110489",
-      "link": "https://www.sciencedirect.com/science/article/pii/S1470160X23006313"
+      "link": "https://doi.org/10.1016/j.ecolind.2023.110489"
     },
     {
       "year": 2023,
@@ -54,7 +70,7 @@
       "title": "Waterline digital elevation model development for quantifying inundation duration and coastal protection of tidal wetlands",
       "journal": "Science of The Total Environment",
       "detail": ", 162519",
-      "link": "https://www.sciencedirect.com/journal/science-of-the-total-environment/vol/874/suppl/C"
+      "link": "https://doi.org/10.1016/j.scitotenv.2023.162519"
     },
     {
       "year": 2023,
@@ -70,7 +86,7 @@
       "title": "In-river weir effects on the alteration of flow regime and regarding structural stream habitat",
       "journal": "Journal of Hydrology",
       "detail": "128670",
-      "link": "https://www.sciencedirect.com/science/article/pii/S0022169422012409?via%3Dihub"
+      "link": "https://doi.org/10.1016/j.jhydrol.2022.128670"
     },
     {
       "year": 2022,
@@ -86,7 +102,7 @@
       "title": "Mangrove colonization on tidal flats causes straightened tidal channels and consequent changes in the hydrodynamic gradient and siltation potential",
       "journal": "Journal of Environmental Management",
       "detail": "314, 115058",
-      "link": "https://www.sciencedirect.com/science/article/pii/S0301479722006314?dgcid=author"
+      "link": "https://doi.org/10.1016/j.jenvman.2022.115058"
     },
     {
       "year": 2022,
@@ -94,7 +110,7 @@
       "title": "Geomorphological Dynamics of Tidal Channels and Flats in Mangrove Swamps",
       "journal": "Estuarine, Coastal and Shelf Science",
       "detail": "265, 107704",
-      "link": "https://www.sciencedirect.com/science/article/pii/S0272771421005539?via%3Dihub"
+      "link": "https://doi.org/10.1016/j.ecss.2021.107704"
     },
     {
       "year": 2021,
@@ -118,7 +134,7 @@
       "title": "Identifying tree characteristics to determine the blocking effects of water conveyance for natural flood management in urban rivers",
       "journal": "Journal of Flood Risk Management",
       "detail": "e12742",
-      "link": "https://onlinelibrary.wiley.com/doi/full/10.1111/jfr3.12742"
+      "link": "https://doi.org/10.1111/jfr3.12742"
     },
     {
       "year": 2021,
@@ -126,7 +142,7 @@
       "title": "Restoration recommendations for mitigating habitat fragmentation of a river corridor",
       "journal": "Journal of Environmental Management",
       "detail": "296, 113197",
-      "link": "https://www.sciencedirect.com/science/article/pii/S0301479721012597"
+      "link": "https://doi.org/10.1016/j.jenvman.2021.113197"
     },
     {
       "year": 2021,
@@ -134,7 +150,7 @@
       "title": "Management Recommendations Based on Physical Forces Driving Land-Covers and Habitat Preferences of Polychaete and Bird Assemblages for a Mangrove-Vegetated Estuary",
       "journal": "Wetlands",
       "detail": "41, 19",
-      "link": "https://link.springer.com/article/10.1007/s13157-021-01406-9#citeas"
+      "link": "https://doi.org/10.1007/s13157-021-01406-9"
     },
     {
       "year": 2020,
@@ -149,7 +165,7 @@
       "authors": "Shih, S.-S.*, Wang, H.-C.",
       "title": "Flow Uniformity Metrics for Quantifying the Hydraulic Performance of Constructed Wetlands",
       "journal": "Ecological Engineering",
-      "detail": "155, 105492",
+      "detail": "155, 105942",
       "link": "https://doi.org/10.1016/j.ecoleng.2020.105942"
     },
     {
@@ -158,7 +174,7 @@
       "title": "A nonstructural flood prevention measure for mitigating urban inundation impacts along with river flooding effects",
       "journal": "Journal of Environmental Management",
       "detail": "251, 109553",
-      "link": "https://www.sciencedirect.com/science/article/pii/S030147971931271X?dgcid=author"
+      "link": "https://doi.org/10.1016/j.jenvman.2019.109553"
     },
     {
       "year": 2017,
@@ -174,7 +190,7 @@
       "title": "Optimal Combinations of Non-Sequential Regressors for ARX-Based Typhoon Inundation Forecast Models Considering Multiple Objectives",
       "journal": "Water",
       "detail": "9(7), 519",
-      "link": "http://www.mdpi.com/search?authors=Huei-Tau%20Ouyang&orcid=0000-0002-0167-5275"
+      "link": "https://doi.org/10.3390/w9070519"
     },
     {
       "year": 2016,
