@@ -1,0 +1,86 @@
+{
+  "topics": [
+    {
+      "id": "mangrove",
+      "title_en": "Mangrove Wetlands",
+      "title_zh": "紅樹林濕地",
+      "image": "assets/img/site/hero.jpg",
+      "summary_en": "Quantifying how mangrove forests buffer floods, storm surges and coastal erosion, and how tidal creeks and mudflats evolve under engineering pressure and sea-level rise.",
+      "summary_zh": "量化紅樹林對洪水、暴潮與海岸侵蝕的緩衝能力，並探討潮溝與潮灘在工程壓力及海平面上升下的地形演變。",
+      "points_en": [
+        "Reservoirs, weirs, sabo dams and embankments secure water resources and flood protection in Taiwan, but the disruption of the river corridor and sediment delivery they cause often degrades the downstream estuary and coastal zone. Sea-level rise further threatens coastal communities and valuable ecosystems such as mangrove forests.",
+        "Mangrove forests can keep pace with sea-level rise through vertical accretion of sediments, maintaining wetland soil elevations suitable for plant growth. Their massive root systems dissipate wave energy and stabilize the coastal environment.",
+        "We have established fundamental data on the natural capacity of rivers and the impact of river engineering on mangroves, framed by the concepts of ecosystem functions and services and integrated watershed management, particularly hydrological regulation and erosion protection.",
+        "Current objectives: (1) quantify the contribution of mangroves to Eco-DRR for flood and storm surge reduction and sediment siltation; (2) quantify the evolution of tidal creeks and mudflats and identify landscape structure, dynamics and habitat characteristics; (3) examine the mechanisms of mangrove seedling dispersal and exchange from a hydrodynamic perspective."
+      ],
+      "points_zh": [
+        "水庫、攔河堰、防砂壩與堤防確保了臺灣的水資源與防洪安全，但其造成的河川廊道阻斷與輸砂中斷，往往導致下游河口與海岸帶的劣化；海平面上升更進一步威脅海岸聚落與紅樹林等珍貴生態系。",
+        "紅樹林可藉由泥砂的垂直淤積跟上海平面上升速率，維持適合植物生長的濕地地盤高程；其龐大的根系已證實能消散波浪能量，穩定海岸環境。",
+        "本研究室已建立河川自然營力程度與河川工程對紅樹林影響的基礎資料，並以生態系功能與服務、集水區整合管理概念為架構，特別著重於水文調節與侵蝕防護功能。",
+        "現階段目標：(1) 量化紅樹林在減洪、減暴潮與泥砂淤積方面對 Eco-DRR 的貢獻；(2) 量化潮溝與潮灘的演變，辨識地景結構、動態與棲地特性；(3) 由水動力觀點探討紅樹林胎生苗的擴散與交換機制。"
+      ]
+    },
+    {
+      "id": "mountain",
+      "title_en": "Mountain Wetlands",
+      "title_zh": "高山濕地",
+      "image": "assets/img/site/bg-2.jpg",
+      "summary_en": "Water budget and groundwater interaction of Menghuan Lake, the only natural habitat in the world of the endemic quillwort Isoetes taiwanensis.",
+      "summary_zh": "夢幻湖水平衡與地下水交互作用研究 —— 該處為特有種台灣水韭全球唯一的天然棲地。",
+      "points_en": [
+        "Hydrological condition is one of the most critical driving forces for the aquatic ecosystems of mountain wetlands. Menghuan Lake in Yangmingshan National Park is the only natural habitat of the endemic plant species Isoetes taiwanensis in the world.",
+        "The population of Isoetes taiwanensis is highly sensitive to water level fluctuation. Historical records show that reduced rainfall in spring and summer lowers water levels, imposing environmental stress on its growth and competition.",
+        "A water budget model has been developed, demonstrating the importance of estimating atmospheric, surface water and groundwater components.",
+        "The ratio of outflow to total lake water loss is between 27% and 54%, indicating that groundwater plays the major role in water loss and that outflow is the main loss item in the overall water balance.",
+        "Tracer tests in groundwater observation wells confirm that lake water enters the groundwater flow through infiltration or leakage and is drained along fractures."
+      ],
+      "points_zh": [
+        "水文條件是高山濕地水域生態系最關鍵的驅動力之一。陽明山國家公園內的夢幻湖，是全世界特有種台灣水韭（Isoetes taiwanensis）唯一的天然棲地。",
+        "台灣水韭族群對水位變動高度敏感。歷史紀錄顯示春夏降雨偏少會使水位下降，對其生長與競爭形成環境逆境。",
+        "目前已建立水平衡模式，證實推估大氣、地表水與地下水各項水量的重要性。",
+        "出流量占湖泊總失水量的 27%～54%，顯示地下水為主要失水途徑，出流則是整體水文收支中最主要的支出項。",
+        "透過在地下水觀測井投放示蹤劑，確認湖水可經由入滲或滲漏進入地下水流，並沿裂隙排出。"
+      ]
+    },
+    {
+      "id": "constructed",
+      "title_en": "Constructed Wetlands",
+      "title_zh": "人工濕地",
+      "image": "assets/img/site/bg-3.jpg",
+      "summary_en": "Improving the hydraulic performance of free water surface wetlands through tracer experiments, flume experiments and numerical simulation.",
+      "summary_zh": "以示蹤劑試驗、水槽實驗與數值模擬改善自由水面人工濕地的水理效能。",
+      "points_en": [
+        "Wetland rehabilitation has gained renewed attention, especially in the hydraulic design of constructed wetlands, following the declaration of the Wetland Conservation Act in Taiwan in 2013.",
+        "Free water surface wetlands (FWSs) are widely used worldwide as low-cost alternatives to conventional tertiary municipal wastewater treatment. They reduce nitrogen concentration, remove particulates through sedimentation and remove organic contaminants through biodegradation.",
+        "FWSs also promote biodiversity by providing habitat for plants and animals with an affinity for aquatic environments. Their treatment efficiency is strongly related to flow pattern and hydraulic residence time.",
+        "Our research simulates flow conditions and calculates hydraulic loading, hydraulic retention time, effective volume ratio and hydraulic efficiency - the most critical parameters in FWS design - using tracer technology together with numerical simulation and flume experiments."
+      ],
+      "points_zh": [
+        "自 2013 年臺灣濕地保育法公布施行後，濕地復育、特別是人工濕地的水理設計再度受到重視。",
+        "自由水面人工濕地（FWS）在全球被廣泛用作傳統三級污水處理的低成本替代方案，可降低氮濃度、藉沉澱去除顆粒物質，並透過生物降解去除有機污染物。",
+        "人工濕地同時提供親水性動植物棲地，有助於提升生物多樣性；其處理效率與流場型態及水力停留時間密切相關。",
+        "本研究以示蹤劑技術結合數值模擬與水槽實驗，模擬流況並計算水力負荷、水力停留時間、有效容積比與水力效率等人工濕地設計最關鍵的參數。"
+      ]
+    },
+    {
+      "id": "ecodrr",
+      "title_en": "Ecosystem-based Disaster Risk Reduction (Eco-DRR)",
+      "title_zh": "生態系統為本之災害風險減輕（Eco-DRR）",
+      "image": "assets/img/site/bg-4.jpg",
+      "summary_en": "Assessing the Taipei Flood Prevention System with numerical models and field surveys, and linking human needs with ecosystem conservation.",
+      "summary_zh": "以數值模式與現地調查評估臺北防洪體系，並連結人類需求與生態系保育。",
+      "points_en": [
+        "River flooding is one of the major hazards in Taiwan because of the dense population living along riversides. The Taipei metropolitan area holds more than one-third of the population of Taiwan and has suffered severe typhoon-induced flooding. The Taipei Flood Prevention System mitigates these disasters effectively, but its function may change over time with urban development and the multiple demands placed on floodplains.",
+        "This project examines anthropogenic effects on the major region of the Taipei Flood Prevention System using numerical model simulations incorporating field surveys.",
+        "Scenarios such as river excavation and partial plant removal on the floodplain have been set up and simulated. Structural and non-structural measures are provided and assessed from the perspectives of ecological services and Eco-DRR.",
+        "We apply the Eco-DRR approach by investigating ecological, environmental, landscape and socioeconomic factors that influence flood defense capacity. Through field surveys, numerical models and interdisciplinary approaches we seek to understand the causes of flooding and the response of flood-defense systems to multiple stressors, and we address social, economic and cultural realities through communication and public participation - linking human needs with ecosystem conservation."
+      ],
+      "points_zh": [
+        "由於沿河人口密集，河川洪災是臺灣主要天然災害之一。大臺北都會區集中全國三分之一以上人口，歷來屢因颱風釀成重大洪災。臺北防洪體系有效減輕了災害，但其防洪功能可能隨都市發展及洪氾平原多元使用需求而改變。",
+        "本計畫以數值模式模擬結合現地調查，檢視人為活動對臺北防洪體系主要區域的影響。",
+        "已建立並模擬河道疏濬、洪氾平原部分植生移除等情境，並自生態服務與 Eco-DRR 觀點提出並評估結構性與非結構性對策。",
+        "我們以 Eco-DRR 途徑探討影響防洪能力的生態、環境、地景與社會經濟因子，透過現地調查、數值模式與跨領域方法理解致災成因與防洪系統對多重壓力的反應，並藉由溝通與公眾參與回應社會、經濟與文化現實，連結人類需求與生態系保育。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "people": [
+    {
+      "group": "staff",
+      "name_zh": "陳柏林",
+      "name_en": "Bo-Lin Chen",
+      "role_en": "Research Associate",
+      "role_zh": "研究人員",
+      "topic_en": "Vegetation Management of Floodplain and Eco-dredge Assessment of River and Wetlands",
+      "topic_zh": "",
+      "education": [
+        "M.S., Bioenvironmental Systems Engineering, National Taiwan University, 2013"
+      ],
+      "hometown_en": "Taipei, Taiwan",
+      "hometown_zh": "臺北",
+      "grad_year": 2013,
+      "photo": "assets/img/people/bo-lin-chen.jpg",
+      "email": ""
+    },
+    {
+      "group": "staff",
+      "name_zh": "林淑幸",
+      "name_en": "Shu-Hsing Lin",
+      "role_en": "Administrative Assistant",
+      "role_zh": "行政助理",
+      "topic_en": "Financial and Budget Management",
+      "topic_zh": "",
+      "education": [
+        "National Pingtung University of Science and Technology, 1990"
+      ],
+      "hometown_en": "Taipei, Taiwan",
+      "hometown_zh": "臺北",
+      "grad_year": 1990,
+      "photo": "assets/img/people/shu-hsing-lin.jpg",
+      "email": ""
+    },
+    {
+      "group": "student",
+      "name_zh": "徐偉銓",
+      "name_en": "Wei-Chuan Hsu",
+      "role_en": "Master student",
+      "role_zh": "碩士生",
+      "topic_en": "Energy Dissipation for River Bank Protection induced by Mangrove Complex Root System and Canopy",
+      "topic_zh": "",
+      "education": [
+        "B.S., Soil and Water Conservation, National Chung Hsing University, 2019"
+      ],
+      "hometown_en": "Hsinchu, Taiwan",
+      "hometown_zh": "新竹",
+      "grad_year": 2019,
+      "photo": "assets/img/people/wei-chuan-hsu.jpg",
+      "email": ""
+    },
+    {
+      "group": "student",
+      "name_zh": "李冠穎",
+      "name_en": "Kuan-Ying Lee",
+      "role_en": "Master student",
+      "role_zh": "碩士生",
+      "topic_en": "Development and Application of Tidal Creek Evolution Model",
+      "topic_zh": "",
+      "education": [
+        "B.S., Hydraulic and Ocean Engineering, National Cheng Kung University, 2019"
+      ],
+      "hometown_en": "Pingtung, Taiwan",
+      "hometown_zh": "屏東",
+      "grad_year": 2019,
+      "photo": "assets/img/people/kuan-ying-lee.jpg",
+      "email": ""
+    },
+    {
+      "group": "student",
+      "name_zh": "蘇語乾",
+      "name_en": "Yu-Qian Su",
+      "role_en": "Master student",
+      "role_zh": "碩士生",
+      "topic_en": "Seedling Spreading of Avicennia marina Considering Currents, Tides and Waves",
+      "topic_zh": "",
+      "education": [
+        "B.S., Civil Engineering, National Taipei University of Technology, 2019"
+      ],
+      "hometown_en": "Fuzhou, China",
+      "hometown_zh": "中國福州",
+      "grad_year": 2019,
+      "photo": "assets/img/people/yu-qian-su.png",
+      "email": ""
+    },
+    {
+      "group": "student",
+      "name_zh": "黃中澤",
+      "name_en": "Zhong-Ze Huang",
+      "role_en": "Master student",
+      "role_zh": "碩士生",
+      "topic_en": "Development and Application of Tidal Creek Evolution Model",
+      "topic_zh": "",
+      "education": [
+        "B.S., Marine Environment and Engineering, National Sun Yat-sen University, 2019"
+      ],
+      "hometown_en": "Taipei, Taiwan",
+      "hometown_zh": "臺北",
+      "grad_year": 2019,
+      "photo": "assets/img/people/zhong-ze-huang.jpg",
+      "email": ""
+    },
+    {
+      "group": "alumni",
+      "name_zh": "許耀文",
+      "name_en": "Yao-Wen Hsu",
+      "role_en": "Master student",
+      "role_zh": "碩士生",
+      "topic_en": "Water Movement between Surface Water and Unconfined Aquifer and Soil-Water Conservation of a Mountain Wetland",
+      "topic_zh": "",
+      "education": [
+        "M.S., Civil Engineering, National Taiwan University, 2020",
+        "B.S., Civil Engineering, National Taiwan University, 2018"
+      ],
+      "hometown_en": "Taichung, Taiwan",
+      "hometown_zh": "臺中",
+      "grad_year": 2020,
+      "photo": "assets/img/people/yao-wen-hsu.jpg",
+      "email": ""
+    },
+    {
+      "group": "alumni",
+      "name_zh": "陳柏智",
+      "name_en": "Po-Chih Chen",
+      "role_en": "Master student",
+      "role_zh": "碩士生",
+      "topic_en": "Integrating UAV Techniques and Vegetation Hydraulics on River Flood Control along with Nature-Based Solution",
+      "topic_zh": "",
+      "education": [
+        "M.S., Civil Engineering, National Taiwan University, 2020",
+        "B.S., Marine Environment and Engineering, National Sun Yat-sen University, 2018"
+      ],
+      "hometown_en": "Tainan, Taiwan",
+      "hometown_zh": "臺南",
+      "grad_year": 2020,
+      "photo": "assets/img/people/po-chih-chen.jpg",
+      "email": ""
+    },
+    {
+      "group": "alumni",
+      "name_zh": "王泓智",
+      "name_en": "Hung-Chih Wang",
+      "role_en": "Master student",
+      "role_zh": "碩士生",
+      "topic_en": "Image Coloring Techniques for Identifying Preferential Flow and Dead Zones in Constructed Wetlands",
+      "topic_zh": "",
+      "education": [
+        "M.S., Civil Engineering, National Taiwan University, 2020",
+        "B.S., Civil Engineering, National Taiwan University, 2018"
+      ],
+      "hometown_en": "Kaohsiung, Taiwan",
+      "hometown_zh": "高雄",
+      "grad_year": 2020,
+      "photo": "assets/img/people/hung-chih-wang.jpg",
+      "email": ""
+    },
+    {
+      "group": "alumni",
+      "name_zh": "鄭庭宇",
+      "name_en": "Ting-Yu Cheng",
+      "role_en": "Master student",
+      "role_zh": "碩士生",
+      "topic_en": "Simulations for Geomorphologic Dynamics of Tidal Creeks and Mudflats",
+      "topic_zh": "",
+      "education": [
+        "M.S., Civil Engineering, National Taiwan University, 2019",
+        "B.S., Hydraulic and Ocean Engineering, National Cheng Kung University, 2017"
+      ],
+      "hometown_en": "Taichung, Taiwan",
+      "hometown_zh": "臺中",
+      "grad_year": 2019,
+      "photo": "assets/img/people/ting-yu-cheng.jpg",
+      "email": ""
+    },
+    {
+      "group": "alumni",
+      "name_zh": "劉吉興",
+      "name_en": "Ji-Xing Liu",
+      "role_en": "Master student",
+      "role_zh": "碩士生",
+      "topic_en": "Wavelet Analysis",
+      "topic_zh": "",
+      "education": [
+        "M.S., Civil Engineering, National Taiwan University, 2019",
+        "B.S., Hydraulic Engineering, Fuzhou University, 2017"
+      ],
+      "hometown_en": "Fuzhou, China",
+      "hometown_zh": "中國福州",
+      "grad_year": 2019,
+      "photo": "assets/img/people/ji-xing-liu.jpg",
+      "email": ""
+    },
+    {
+      "group": "alumni",
+      "name_zh": "許偉斌",
+      "name_en": "Wei-Bin Xu",
+      "role_en": "Master student",
+      "role_zh": "碩士生",
+      "topic_en": "Diffusion Characteristics of Kandelia obovata Mangrove Seedlings",
+      "topic_zh": "",
+      "education": [
+        "M.S., Civil Engineering, National Taiwan University, 2019",
+        "B.S., Water Conservancy and Hydropower Engineering, Fuzhou University, 2017"
+      ],
+      "hometown_en": "Quanzhou, China",
+      "hometown_zh": "中國泉州",
+      "grad_year": 2019,
+      "photo": "assets/img/people/wei-bin-xu.jpg",
+      "email": ""
+    },
+    {
+      "group": "alumni",
+      "name_zh": "吳諮育",
+      "name_en": "Tzu-Yu Wu",
+      "role_en": "Research Assistant",
+      "role_zh": "研究助理",
+      "topic_en": "Water Budget Model Development and Ground Water Hydraulics",
+      "topic_zh": "",
+      "education": [
+        "M.S., Civil Engineering, National Ilan University, 2017"
+      ],
+      "hometown_en": "Yilan, Taiwan",
+      "hometown_zh": "宜蘭",
+      "grad_year": 2017,
+      "photo": "assets/img/people/tzu-yu-wu.jpg",
+      "email": ""
+    },
+    {
+      "group": "alumni",
+      "name_zh": "郭品含",
+      "name_en": "Pin-Han Kuo",
+      "role_en": "Postdoctoral Researcher",
+      "role_zh": "博士後研究員",
+      "topic_en": "Wetland Restoration, Flood Mitigation, Constructed Wetland",
+      "topic_zh": "",
+      "education": [
+        "PhD, Hydraulic and Ocean Engineering, National Cheng Kung University, 2015"
+      ],
+      "hometown_en": "Tainan, Taiwan",
+      "hometown_zh": "臺南",
+      "grad_year": 2015,
+      "photo": "assets/img/people/pin-han-kuo.jpg",
+      "email": ""
+    },
+    {
+      "group": "alumni",
+      "name_zh": "許主恩",
+      "name_en": "Chu-En Hsu",
+      "role_en": "Research Assistant",
+      "role_zh": "研究助理",
+      "topic_en": "Eco-hydrology",
+      "topic_zh": "",
+      "education": [
+        "M.S., Hydraulic and Ocean Engineering, National Cheng Kung University, 2015"
+      ],
+      "hometown_en": "Tainan, Taiwan",
+      "hometown_zh": "臺南",
+      "grad_year": 2015,
+      "photo": "assets/img/people/chu-en-hsu.jpg",
+      "email": ""
+    },
+    {
+      "group": "alumni",
+      "name_zh": "高逸安",
+      "name_en": "Yi-An Kao",
+      "role_en": "Research Assistant",
+      "role_zh": "研究助理",
+      "topic_en": "Eco-hydrology",
+      "topic_zh": "",
+      "education": [
+        "B.S., Water Resources and Environmental Engineering, Tamkang University, 2015"
+      ],
+      "hometown_en": "Taipei, Taiwan",
+      "hometown_zh": "臺北",
+      "grad_year": 2015,
+      "photo": "assets/img/people/yi-an-kao.jpg",
+      "email": ""
+    }
+  ]
+}

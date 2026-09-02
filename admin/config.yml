@@ -1,0 +1,173 @@
+# ---------------------------------------------------------------------------
+# 研究室網站後台設定 (Sveltia CMS，相容 Decap CMS 格式)
+#
+# 部署前務必修改下面的 repo 為實際的 GitHub 倉庫，例如 ntuce908/lab-website
+# ---------------------------------------------------------------------------
+
+backend:
+  name: github
+  repo: OWNER/REPO          # ← 改成你的 GitHub 帳號/倉庫名稱
+  branch: main
+  base_url: https://sveltia-cms-auth.dev   # Sveltia 官方免費 OAuth 中繼
+
+media_folder: assets/img/uploads
+public_folder: assets/img/uploads
+
+publish_mode: simple
+locale: zh_Hant
+
+collections:
+  # ---------------- 網站基本設定 ----------------
+  - name: settings
+    label: 網站設定
+    files:
+      - name: site
+        label: 站台資訊
+        file: content/site.json
+        format: json
+        fields:
+          - { name: lab_name_zh, label: 研究室名稱（中）, widget: string }
+          - { name: lab_name_en, label: 研究室名稱（英）, widget: string }
+          - { name: affiliation_zh, label: 所屬單位（中）, widget: string }
+          - { name: affiliation_en, label: 所屬單位（英）, widget: string }
+          - { name: tagline_zh, label: 標語（中）, widget: text }
+          - { name: tagline_en, label: 標語（英）, widget: text }
+          - { name: hero_image, label: 首頁主視覺, widget: image }
+          - { name: logo, label: 標誌, widget: image }
+          - name: contact
+            label: 聯絡資訊
+            widget: object
+            fields:
+              - { name: address_zh, label: 地址（中）, widget: string }
+              - { name: address_en, label: 地址（英）, widget: string }
+              - { name: email, label: 電子郵件, widget: string }
+              - { name: phone, label: 電話, widget: string }
+              - name: links
+                label: 相關連結
+                widget: list
+                fields:
+                  - { name: label, label: 名稱, widget: string }
+                  - { name: url, label: 網址, widget: string }
+
+      - name: pi
+        label: 主持人
+        file: content/pi.json
+        format: json
+        fields:
+          - { name: name_zh, label: 姓名（中）, widget: string }
+          - { name: name_en, label: 姓名（英）, widget: string }
+          - { name: title_zh, label: 職稱（中）, widget: string }
+          - { name: title_en, label: 職稱（英）, widget: string }
+          - { name: photo, label: 照片, widget: image }
+          - { name: email, label: 電子郵件, widget: string }
+          - { name: positions_zh, label: 現職（中）, widget: list, field: { name: item, label: 項目, widget: string } }
+          - { name: positions_en, label: 現職（英）, widget: list, field: { name: item, label: Item, widget: string } }
+          - { name: bio_zh, label: 簡介（中）, widget: text }
+          - { name: bio_en, label: 簡介（英）, widget: text }
+          - { name: interests_zh, label: 研究興趣（中）, widget: list, field: { name: item, label: 項目, widget: string } }
+          - { name: interests_en, label: 研究興趣（英）, widget: list, field: { name: item, label: Item, widget: string } }
+          - { name: courses_zh, label: 教授課程（中）, widget: list, field: { name: item, label: 項目, widget: string } }
+          - { name: courses_en, label: 教授課程（英）, widget: list, field: { name: item, label: Item, widget: string } }
+
+  # ---------------- 研究主題 ----------------
+  - name: research
+    label: 研究主題
+    files:
+      - name: topics
+        label: 研究主題列表
+        file: content/research.json
+        format: json
+        fields:
+          - name: topics
+            label: 主題
+            widget: list
+            label_singular: 主題
+            summary: '{{fields.title_zh}}'
+            fields:
+              - { name: id, label: 錨點代碼（英數字，勿重複）, widget: string }
+              - { name: title_zh, label: 標題（中）, widget: string }
+              - { name: title_en, label: 標題（英）, widget: string }
+              - { name: image, label: 代表圖, widget: image }
+              - { name: summary_zh, label: 摘要（中）, widget: text }
+              - { name: summary_en, label: 摘要（英）, widget: text }
+              - { name: points_zh, label: 說明段落（中）, widget: list, field: { name: item, label: 段落, widget: text } }
+              - { name: points_en, label: 說明段落（英）, widget: list, field: { name: item, label: Paragraph, widget: text } }
+
+  # ---------------- 成員 ----------------
+  - name: members
+    label: 研究成員
+    files:
+      - name: people
+        label: 成員列表
+        file: content/members.json
+        format: json
+        fields:
+          - name: people
+            label: 成員
+            widget: list
+            label_singular: 成員
+            summary: '{{fields.name_zh}} {{fields.name_en}}（{{fields.group}}）'
+            fields:
+              - name: group
+                label: 分類
+                widget: select
+                options:
+                  - { label: 研究人員, value: staff }
+                  - { label: 在學學生, value: student }
+                  - { label: 畢業校友, value: alumni }
+              - { name: name_zh, label: 姓名（中）, widget: string }
+              - { name: name_en, label: 姓名（英）, widget: string }
+              - { name: role_zh, label: 身分（中）, widget: string }
+              - { name: role_en, label: 身分（英）, widget: string }
+              - { name: topic_zh, label: 研究題目（中）, widget: text, required: false }
+              - { name: topic_en, label: 研究題目（英）, widget: text, required: false }
+              - { name: education, label: 學歷, widget: list, required: false, field: { name: item, label: 學歷, widget: string } }
+              - { name: hometown_zh, label: 家鄉（中）, widget: string, required: false }
+              - { name: hometown_en, label: 家鄉（英）, widget: string, required: false }
+              - { name: grad_year, label: 畢業年（用於排序）, widget: number, value_type: int, required: false }
+              - { name: photo, label: 照片, widget: image, required: false }
+              - { name: email, label: 電子郵件, widget: string, required: false }
+
+  # ---------------- 著作 ----------------
+  - name: publications
+    label: 學術著作
+    files:
+      - name: list
+        label: 期刊論文
+        file: content/publications.json
+        format: json
+        fields:
+          - name: publications
+            label: 論文
+            widget: list
+            label_singular: 論文
+            summary: '{{fields.year}}｜{{fields.title}}'
+            fields:
+              - { name: year, label: 年份, widget: number, value_type: int }
+              - { name: authors, label: 作者, widget: string }
+              - { name: title, label: 論文標題, widget: text }
+              - { name: journal, label: 期刊名稱, widget: string }
+              - { name: detail, label: 卷期頁碼, widget: string, required: false }
+              - { name: link, label: DOI 或全文連結, widget: string, required: false }
+
+  # ---------------- 消息 ----------------
+  - name: news
+    label: 最新消息
+    files:
+      - name: list
+        label: 消息列表
+        file: content/news.json
+        format: json
+        fields:
+          - name: news
+            label: 消息
+            widget: list
+            label_singular: 消息
+            summary: '{{fields.date}}｜{{fields.title_zh}}'
+            fields:
+              - { name: date, label: 日期, widget: date, format: 'YYYY-MM-DD' }
+              - { name: title_zh, label: 標題（中）, widget: string }
+              - { name: title_en, label: 標題（英）, widget: string }
+              - { name: body_zh, label: 內容（中）, widget: text }
+              - { name: body_en, label: 內容（英）, widget: text }
+              - { name: link, label: 相關連結, widget: string, required: false }
