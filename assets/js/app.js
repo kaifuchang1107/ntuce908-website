@@ -206,7 +206,7 @@ pages.index = async () => {
   (hero.querySelector('.wrap') || hero).innerHTML = `
     <h1>${esc(pick(site, 'lab_name'))}</h1>
     <p class="affil">${esc(pick(site, 'affiliation'))}</p>
-    <p class="tagline">${esc(pick(site, 'tagline'))}</p>
+    ${pick(site, 'tagline') ? `<p class="tagline">${esc(pick(site, 'tagline'))}</p>` : ''}
     <div class="btn-row">
       <a class="btn btn-primary" href="research.html">${esc(t('hero_cta_research'))}</a>
       <a class="btn btn-ghost" href="publications.html">${esc(t('hero_cta_pubs'))}</a>
