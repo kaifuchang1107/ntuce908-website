@@ -71,6 +71,17 @@ const LIST_KEY = { research: 'topics', members: 'people', publications: 'publica
 // is fatal, everything else degrades to empty and reports itself in a banner
 const loadWarnings = [];
 
+// 學術著作中要標粗的作者寫法，來自 site.json 的 highlight_authors
+let authorRe = null;
+function setAuthorHighlight(list) {
+  const rx = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const parts = (list || []).filter(Boolean)
+    .map(n => rx(n.trim()).replace(/ /g, '\\s*'));
+  authorRe = parts.length ? new RegExp('(' + parts.join('|') + ')', 'g') : null;
+}
+// 只作用在已跳脫的 HTML 片段上
+const markPI = html => authorRe ? html.replace(authorRe, '<strong class="pi">$1</strong>') : html;
+
 async function load(name) {
   const key = LIST_KEY[name];
   let data;
@@ -78,6 +89,7 @@ async function load(name) {
     const res = await fetch(`content/${name}.json`, { cache: 'no-cache' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     data = await res.json();
+    if (name === 'site') setAuthorHighlight(data.highlight_authors);
   } catch (err) {
     if (name === 'site') throw new Error(`content/site.json 讀取失敗：${err.message}`);
     console.error(`content/${name}.json`, err);
@@ -379,12 +391,12 @@ function highlight(text, term) {
 
 function pubHTML(p, n, term) {
   if (!p.title) {
-    return `<li class="pub"><span class="num">${n}.</span>${highlight(p.detail, term)}
+    return `<li class="pub"><span class="num">${n}.</span>${markPI(highlight(p.detail, term))}
       ${p.link ? `<a class="doi" href="${esc(p.link)}" target="_blank" rel="noopener">DOI</a>` : ''}</li>`;
   }
   return `<li class="pub">
     <span class="num">${n}.</span>
-    <span class="authors">${highlight(p.authors, term)}</span>,
+    <span class="authors">${markPI(highlight(p.authors, term))}</span>,
     <span class="year">${p.year}</span>,
     <span class="pub-title">${highlight(p.title, term)}</span>,
     <span class="journal">${highlight(p.journal, term)}</span>${p.detail ? `, <span class="detail">${esc(p.detail)}</span>` : ''}.

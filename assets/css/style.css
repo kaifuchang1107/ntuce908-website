@@ -295,3 +295,6 @@ mark { background: #fdf0c8; color: inherit; padding: 0 1px; }
   background: #fdf0c8; color: #6b4e00; border-bottom: 1px solid #e6cf85;
   padding: 12px 24px; font-size: 13.5px; line-height: 1.6;
 }
+
+/* 學術著作中主持人姓名 */
+.pub .authors strong.pi { font-weight: 700; color: var(--ink); }

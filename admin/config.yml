@@ -34,6 +34,12 @@ collections:
           - { name: tagline_en, label: 標語（英）, widget: text }
           - { name: hero_image, label: 首頁主視覺, widget: image }
           - { name: logo, label: 標誌, widget: image }
+          - name: highlight_authors
+            label: 著作頁要標粗的作者寫法
+            hint: 例如「Shih, S.-S.」「S.-S. Shih」，大小寫與標點需與著作資料一致
+            widget: list
+            required: false
+            field: { name: item, label: 寫法, widget: string }
           - name: contact
             label: 聯絡資訊
             widget: object
