@@ -16,7 +16,7 @@ const UI = {
     group_staff: '研究人員', group_student: '在學學生', group_alumni: '畢業校友',
     hometown: '家鄉', education: '學歷',
     pi_title: '主持人', pi_about: '簡介', pi_interests: '研究興趣', pi_courses: '教授課程',
-    contact: '聯絡我們', links: '相關連結', address: '地址', email: '電子郵件', phone: '電話',
+    contact: '聯絡我們', links: '相關連結', address: '地址', email: '電子郵件', phone: '電話', office: '研究室',
     empty: '目前沒有資料。',
     footer_rights: '版權所有',
     years_active: '發表年間',
@@ -35,7 +35,7 @@ const UI = {
     group_staff: 'Research Fellow', group_student: 'Students', group_alumni: 'Alumni',
     hometown: 'Hometown', education: 'Education',
     pi_title: 'Principal Investigator', pi_about: 'About', pi_interests: 'Research Interests', pi_courses: 'Teaching Courses',
-    contact: 'Contact', links: 'Links', address: 'Address', email: 'Email', phone: 'Phone',
+    contact: 'Contact', links: 'Links', address: 'Address', email: 'Email', phone: 'Phone', office: 'Office',
     empty: 'Nothing here yet.',
     footer_rights: 'All rights reserved',
     years_active: 'Years published',
@@ -287,6 +287,10 @@ pages.pi = async () => {
         <h2>${esc(pick(pi, 'name'))}　<span style="font-size:16px;color:var(--ink-faint)">${esc(pick(pi, 'title'))}</span></h2>
         <p class="en">${esc(lang === 'zh' ? pi.name_en : pi.name_zh)}</p>
         <ul>${pick(pi, 'positions').map(p => `<li>${esc(p)}</li>`).join('')}</ul>
+        <p class="pi-contact">
+          ${pick(pi, 'office') ? `${esc(t('office'))}：${esc(pick(pi, 'office'))}<br>` : ''}
+          ${pi.phone ? `${esc(t('phone'))}：${esc(pi.phone)}` : ''}
+        </p>
         <a class="btn btn-primary" href="mailto:${esc(pi.email)}">${esc(t('email'))}</a>
       </aside>
       <div>

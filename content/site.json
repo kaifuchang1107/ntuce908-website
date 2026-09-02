@@ -8,10 +8,10 @@
   "hero_image": "assets/img/site/hero.jpg",
   "logo": "assets/img/site/logo.png",
   "contact": {
-    "address_en": "No. 1, Sec. 4, Roosevelt Rd., Da'an Dist., Taipei City 106319, Taiwan",
-    "address_zh": "106319 臺北市大安區羅斯福路四段一號　臺大土木工程學系",
-    "email": "ssshih@ntu.edu.tw",
-    "phone": "+886-2-3366-4275",
+    "address_en": "Room 908, Civil Engineering Research Building, No. 1, Sec. 4, Roosevelt Rd., Da'an Dist., Taipei City 106319, Taiwan",
+    "address_zh": "106319 臺北市大安區羅斯福路四段一號　臺大土木工程學系　土研 908 室",
+    "email": "uptreeshih@ntu.edu.tw",
+    "phone": "+886-2-3366-4301",
     "links": [
       {
         "label": "Hydrotech Research Institute, NTU",

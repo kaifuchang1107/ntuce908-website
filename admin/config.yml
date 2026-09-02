@@ -66,6 +66,9 @@ collections:
           - { name: title_en, label: 職稱（英）, widget: string }
           - { name: photo, label: 照片, widget: image }
           - { name: email, label: 電子郵件, widget: string }
+          - { name: phone, label: 電話, widget: string, required: false }
+          - { name: office_zh, label: 研究室（中）, widget: string, required: false }
+          - { name: office_en, label: 研究室（英）, widget: string, required: false }
           - { name: positions_zh, label: 現職（中）, widget: list, field: { name: item, label: 項目, widget: string } }
           - { name: positions_en, label: 現職（英）, widget: list, field: { name: item, label: Item, widget: string } }
           - { name: bio_zh, label: 簡介（中）, widget: text }

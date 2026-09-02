@@ -4,7 +4,7 @@
   "title_zh": "教授",
   "title_en": "Professor",
   "photo": "assets/img/site/pi.jpg",
-  "email": "ssshih@ntu.edu.tw",
+  "email": "uptreeshih@ntu.edu.tw",
   "positions_zh": [
     "國立臺灣大學土木工程學系 教授",
     "國立臺灣大學水工試驗所 所長",
@@ -50,5 +50,8 @@
     "物理模型設計實驗",
     "土木工程整合設計",
     "水患災害、教訓與防治"
-  ]
+  ],
+  "office_zh": "土研 908 室",
+  "office_en": "Room 908, Civil Engineering Research Building",
+  "phone": "+886-2-3366-4301"
 }
