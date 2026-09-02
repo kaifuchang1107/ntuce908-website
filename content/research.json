@@ -4,7 +4,7 @@
       "id": "mangrove",
       "title_en": "Mangrove Wetlands",
       "title_zh": "紅樹林濕地",
-      "image": "assets/img/site/hero.jpg",
+      "image": "assets/img/site/mangrove-aerial.jpg",
       "summary_en": "Quantifying how mangrove forests buffer floods, storm surges and coastal erosion, and how tidal creeks and mudflats evolve under engineering pressure and sea-level rise.",
       "summary_zh": "量化紅樹林對洪水、暴潮與海岸侵蝕的緩衝能力，並探討潮溝與潮灘在工程壓力及海平面上升下的地形演變。",
       "points_en": [
@@ -24,7 +24,7 @@
       "id": "mountain",
       "title_en": "Mountain Wetlands",
       "title_zh": "高山濕地",
-      "image": "assets/img/site/bg-2.jpg",
+      "image": "assets/img/site/menghuan-lake.jpg",
       "summary_en": "Water budget and groundwater interaction of Menghuan Lake, the only natural habitat in the world of the endemic quillwort Isoetes taiwanensis.",
       "summary_zh": "夢幻湖水平衡與地下水交互作用研究 —— 該處為特有種台灣水韭全球唯一的天然棲地。",
       "points_en": [
@@ -46,7 +46,7 @@
       "id": "constructed",
       "title_en": "Constructed Wetlands",
       "title_zh": "人工濕地",
-      "image": "assets/img/site/bg-3.jpg",
+      "image": "assets/img/site/treatment-pond.jpg",
       "summary_en": "Improving the hydraulic performance of free water surface wetlands through tracer experiments, flume experiments and numerical simulation.",
       "summary_zh": "以示蹤劑試驗、水槽實驗與數值模擬改善自由水面人工濕地的水理效能。",
       "points_en": [
@@ -66,7 +66,7 @@
       "id": "ecodrr",
       "title_en": "Ecosystem-based Disaster Risk Reduction (Eco-DRR)",
       "title_zh": "生態系統為本之災害風險減輕（Eco-DRR）",
-      "image": "assets/img/site/bg-4.jpg",
+      "image": "assets/img/site/taipei-floodplain.png",
       "summary_en": "Assessing the Taipei Flood Prevention System with numerical models and field surveys, and linking human needs with ecosystem conservation.",
       "summary_zh": "以數值模式與現地調查評估臺北防洪體系，並連結人類需求與生態系保育。",
       "points_en": [

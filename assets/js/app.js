@@ -278,7 +278,7 @@ pages.research = async () => {
 
 pages.pi = async () => {
   const [site, pi] = await Promise.all(['site', 'pi'].map(n => load(n)));
-  setPageHead(site, t('pi_title'), '', 'assets/img/site/pi-bg.jpg');
+  setPageHead(site, t('pi_title'), '', 'assets/img/site/menghuan-lake-dark.jpg');
 
   sec('pi').innerHTML = `
     <div class="wrap pi-grid">
@@ -315,7 +315,7 @@ pages.pi = async () => {
 
 pages.members = async () => {
   const [site, people] = await Promise.all(['site', 'members'].map(n => load(n)));
-  setPageHead(site, t('members_title'), '', 'assets/img/site/bg-2.jpg');
+  setPageHead(site, t('members_title'), '', 'assets/img/site/fiddler-crab.jpg');
 
   const groups = [['staff', 'group_staff'], ['student', 'group_student'], ['alumni', 'group_alumni']];
   sec('members').innerHTML = groups.map(([g, key], i) => {
@@ -334,7 +334,7 @@ pages.members = async () => {
 
 pages.publications = async () => {
   const [site, pubs] = await Promise.all(['site', 'publications'].map(n => load(n)));
-  setPageHead(site, t('pubs_title'), t('pubs_sub'), 'assets/img/site/bg-3.jpg');
+  setPageHead(site, t('pubs_title'), t('pubs_sub'), 'assets/img/site/menghuan-lake.jpg');
 
   const years = [...new Set(pubs.map(p => p.year))].sort((a, b) => b - a);
   const journals = [...new Set(pubs.map(p => p.journal).filter(Boolean))].sort();
