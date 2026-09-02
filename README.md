@@ -90,6 +90,23 @@ cd ntuce908-website && python -m http.server 4173
 
 ---
 
+## 改過 CSS 或 JS 之後
+
+GitHub Pages 讓瀏覽器把 `style.css` 與 `app.js` 快取十分鐘，所以改完可能要等一陣子
+才看得到，甚至出現「新的 HTML 配舊的 JS」而畫面怪怪的。
+
+**只要動過 `assets/css/style.css` 或 `assets/js/app.js`，上傳前先跑一次：**
+
+```bash
+python tools/stamp_assets.py
+```
+
+它會依檔案內容算出版本編號、寫進五個頁面的引用網址，檔案一改網址就變，快取自動失效。
+
+> 只改 `content/` 裡的 JSON 不用跑，內容本來就是即時讀取的。
+
+---
+
 ## 部署
 
 網站是純靜態檔案，以下任一種都可以，擇一即可：
