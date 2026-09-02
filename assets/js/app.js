@@ -289,9 +289,9 @@ pages.pi = async () => {
         <ul>${pick(pi, 'positions').map(p => `<li>${esc(p)}</li>`).join('')}</ul>
         <p class="pi-contact">
           ${pick(pi, 'office') ? `${esc(t('office'))}：${esc(pick(pi, 'office'))}<br>` : ''}
-          ${pi.phone ? `${esc(t('phone'))}：${esc(pi.phone)}` : ''}
+          ${pi.phone ? `${esc(t('phone'))}：${esc(pi.phone)}<br>` : ''}
+          ${pi.email ? `${esc(t('email'))}：<a href="mailto:${esc(pi.email)}">${esc(pi.email)}</a>` : ''}
         </p>
-        <a class="btn btn-primary" href="mailto:${esc(pi.email)}">${esc(t('email'))}</a>
       </aside>
       <div>
         <div class="pi-bio">

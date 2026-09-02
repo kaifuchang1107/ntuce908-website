@@ -295,3 +295,6 @@ mark { background: #fdf0c8; color: inherit; padding: 0 1px; }
 .pub .authors strong.pi { font-weight: 700; color: var(--ink); }
 
 .pi-card .pi-contact { font-size: 13.5px; color: var(--ink-soft); margin: 0 0 16px; line-height: 1.8; }
+
+.pi-card .pi-contact a { color: var(--green-700); text-decoration: none; word-break: break-all; }
+.pi-card .pi-contact a:hover { text-decoration: underline; }
