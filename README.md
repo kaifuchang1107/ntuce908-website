@@ -79,7 +79,7 @@ ntuce908-website/
 
 ---
 
-## 4. 部署
+## 部署
 
 網站是純靜態檔案，以下任一種都可以，擇一即可：
 
@@ -104,7 +104,7 @@ Build command 留空、Output directory 填 `/` → Deploy。
 
 ---
 
-## 5. 啟用後台（讓老師也能自己改）
+## 啟用後台（讓老師也能自己改）
 
 1. 先照第 4 節把網站推上 GitHub 並部署。
 2. 編輯 `admin/config.yml`，把 `repo: OWNER/REPO` 改成實際的 `帳號/倉庫名`。
@@ -117,7 +117,7 @@ Build command 留空、Output directory 填 `/` → Deploy。
 
 ---
 
-## 6. 待辦
+## 待辦
 
 - [ ] `content/members.json` 的在學學生仍是 2019–2020 年舊資料，需更新為現任成員
 - [ ] `content/members.json` 的 `topic_zh` 尚未填寫（目前中文版會自動顯示英文題目）
@@ -127,7 +127,7 @@ Build command 留空、Output directory 填 `/` → Deploy。
 
 ---
 
-## 7. 內容來源
+## 內容來源
 
 成員與論文資料由舊站 `ntuce908.weebly.com` 於 2026-09-02 擷取轉換：
 論文 40 篇（2004–2026，含 DOI 連結）、成員 16 位（含照片）。
