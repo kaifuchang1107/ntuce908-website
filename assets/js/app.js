@@ -62,6 +62,17 @@ const el = (tag, cls, html) => {
   if (html !== undefined) n.innerHTML = html;
   return n;
 };
+// 頁面缺少某個區塊時（例如部署期間新 HTML 搭到舊 JS 的快取交錯，
+// 或有人從 HTML 拿掉一段），就地補一個，而不是讓整頁崩掉
+const sec = id => {
+  let n = document.querySelector('#' + id);
+  if (!n) {
+    n = document.createElement('section');
+    n.id = id;
+    document.querySelector('main')?.appendChild(n);
+  }
+  return n;
+};
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 // list files are stored as { key: [...] } so the CMS can edit them as a collection
@@ -190,9 +201,9 @@ pages.index = async () => {
   const [site, research, pubs, news] = await Promise.all(
     ['site', 'research', 'publications', 'news'].map(n => load(n)));
 
-  const hero = document.querySelector('.hero');
+  const hero = document.querySelector('.hero') || document.createElement('div');
   hero.style.backgroundImage = `url("${site.hero_image}")`;
-  hero.querySelector('.wrap').innerHTML = `
+  (hero.querySelector('.wrap') || hero).innerHTML = `
     <h1>${esc(pick(site, 'lab_name'))}</h1>
     <p class="affil">${esc(pick(site, 'affiliation'))}</p>
     <p class="tagline">${esc(pick(site, 'tagline'))}</p>
@@ -201,7 +212,7 @@ pages.index = async () => {
       <a class="btn btn-ghost" href="publications.html">${esc(t('hero_cta_pubs'))}</a>
     </div>`;
 
-  document.querySelector('#research-preview').innerHTML = `
+  sec('research-preview').innerHTML = `
     <div class="wrap">
       <h2 class="section-title">${esc(t('research_title'))}</h2>
       <p class="section-sub">${esc(t('research_sub'))}</p>
@@ -219,7 +230,7 @@ pages.index = async () => {
     </div>`;
 
   const recent = pubs.slice(0, 5);
-  document.querySelector('#recent').innerHTML = `
+  sec('recent').innerHTML = `
     <div class="wrap">
       <h2 class="section-title">${esc(t('pubs_title'))}</h2>
       <p class="section-sub">${esc(t('pubs_sub'))}</p>
@@ -228,7 +239,7 @@ pages.index = async () => {
         <a class="btn btn-primary" href="publications.html">${esc(t('news_more'))}</a></p>
     </div>`;
 
-  document.querySelector('#news').innerHTML = `
+  sec('news').innerHTML = `
     <div class="wrap">
       <h2 class="section-title">${esc(t('news_title'))}</h2>
       <ul class="news-list" style="margin:24px auto 0">
@@ -251,7 +262,7 @@ pages.research = async () => {
   const [site, research] = await Promise.all(['site', 'research'].map(n => load(n)));
   setPageHead(site, t('research_title'), t('research_sub'), site.hero_image);
 
-  document.querySelector('#topics').innerHTML = research.map(r => `
+  sec('topics').innerHTML = research.map(r => `
     <div class="topic" id="${esc(r.id)}">
       <div class="wrap topic-grid">
         <div>
@@ -269,7 +280,7 @@ pages.pi = async () => {
   const [site, pi] = await Promise.all(['site', 'pi'].map(n => load(n)));
   setPageHead(site, t('pi_title'), '', 'assets/img/site/pi-bg.jpg');
 
-  document.querySelector('#pi').innerHTML = `
+  sec('pi').innerHTML = `
     <div class="wrap pi-grid">
       <aside class="pi-card">
         <img src="${esc(pi.photo)}" alt="${esc(pick(pi, 'name'))}">
@@ -303,7 +314,7 @@ pages.members = async () => {
   setPageHead(site, t('members_title'), '', 'assets/img/site/bg-2.jpg');
 
   const groups = [['staff', 'group_staff'], ['student', 'group_student'], ['alumni', 'group_alumni']];
-  document.querySelector('#members').innerHTML = groups.map(([g, key], i) => {
+  sec('members').innerHTML = groups.map(([g, key], i) => {
     const list = people.filter(p => p.group === g);
     if (!list.length) return '';
     return `
@@ -324,7 +335,7 @@ pages.publications = async () => {
   const years = [...new Set(pubs.map(p => p.year))].sort((a, b) => b - a);
   const journals = [...new Set(pubs.map(p => p.journal).filter(Boolean))].sort();
 
-  document.querySelector('#pubs').innerHTML = `
+  sec('pubs').innerHTML = `
     <div class="wrap">
       <div class="pub-tools">
         <input id="q" type="search" placeholder="${esc(t('pubs_search'))}" autocomplete="off">
@@ -418,7 +429,7 @@ function setPageHead(site, title, sub, image) {
   const head = document.querySelector('.page-head');
   if (!head) return;
   if (image) head.style.backgroundImage = `url("${image}")`;
-  head.querySelector('.wrap').innerHTML =
+  (head.querySelector('.wrap') || head).innerHTML =
     `<h1>${esc(title)}</h1>${sub ? `<p>${esc(sub)}</p>` : ''}`;
 }
 
@@ -433,7 +444,7 @@ async function render() {
     if (loadWarnings.length) {
       const box = el('div', 'load-warning',
         '內容檔讀取失敗，該區塊暫時空白：<br>' + loadWarnings.map(esc).join('<br>'));
-      document.querySelector('main').prepend(box);
+      document.querySelector('main')?.prepend(box);
     }
     document.title = `${document.body.dataset.title ? t(document.body.dataset.title) + ' — ' : ''}${pick(site, 'lab_name')}`;
   } catch (err) {
