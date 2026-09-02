@@ -289,3 +289,9 @@ mark { background: #fdf0c8; color: inherit; padding: 0 1px; }
   .site-header, .site-footer, .pub-tools, .hero .btn-row { display: none; }
   body { font-size: 12px; }
 }
+
+/* 內容檔讀取失敗時的提示，只有維護者會看到 */
+.load-warning {
+  background: #fdf0c8; color: #6b4e00; border-bottom: 1px solid #e6cf85;
+  padding: 12px 24px; font-size: 13.5px; line-height: 1.6;
+}

@@ -67,11 +67,23 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '
 // list files are stored as { key: [...] } so the CMS can edit them as a collection
 const LIST_KEY = { research: 'topics', members: 'people', publications: 'publications', news: 'news' };
 
+// a typo in one content file must not blank the whole page: only site.json
+// is fatal, everything else degrades to empty and reports itself in a banner
+const loadWarnings = [];
+
 async function load(name) {
-  const res = await fetch(`content/${name}.json`, { cache: 'no-cache' });
-  if (!res.ok) throw new Error(`content/${name}.json → ${res.status}`);
-  const data = await res.json();
   const key = LIST_KEY[name];
+  let data;
+  try {
+    const res = await fetch(`content/${name}.json`, { cache: 'no-cache' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    data = await res.json();
+  } catch (err) {
+    if (name === 'site') throw new Error(`content/site.json 讀取失敗：${err.message}`);
+    console.error(`content/${name}.json`, err);
+    loadWarnings.push(`content/${name}.json — ${err.message}`);
+    return key ? [] : {};
+  }
   if (!key) return data;
   const list = Array.isArray(data) ? data : (data[key] || []);
   if (name === 'publications') return list.slice().sort((a, b) => b.year - a.year);
@@ -164,7 +176,7 @@ const pages = {};
 
 pages.index = async () => {
   const [site, research, pubs, news] = await Promise.all(
-    ['site', 'research', 'publications', 'news'].map(load));
+    ['site', 'research', 'publications', 'news'].map(n => load(n)));
   const members = await load('members');
 
   const hero = document.querySelector('.hero');
@@ -236,7 +248,7 @@ pages.index = async () => {
 };
 
 pages.research = async () => {
-  const [site, research] = await Promise.all(['site', 'research'].map(load));
+  const [site, research] = await Promise.all(['site', 'research'].map(n => load(n)));
   setPageHead(site, t('research_title'), t('research_sub'), site.hero_image);
 
   document.querySelector('#topics').innerHTML = research.map(r => `
@@ -254,7 +266,7 @@ pages.research = async () => {
 };
 
 pages.pi = async () => {
-  const [site, pi] = await Promise.all(['site', 'pi'].map(load));
+  const [site, pi] = await Promise.all(['site', 'pi'].map(n => load(n)));
   setPageHead(site, t('pi_title'), '', 'assets/img/site/pi-bg.jpg');
 
   document.querySelector('#pi').innerHTML = `
@@ -287,7 +299,7 @@ pages.pi = async () => {
 };
 
 pages.members = async () => {
-  const [site, people] = await Promise.all(['site', 'members'].map(load));
+  const [site, people] = await Promise.all(['site', 'members'].map(n => load(n)));
   setPageHead(site, t('members_title'), '', 'assets/img/site/bg-2.jpg');
 
   const groups = [['staff', 'group_staff'], ['student', 'group_student'], ['alumni', 'group_alumni']];
@@ -306,7 +318,7 @@ pages.members = async () => {
 };
 
 pages.publications = async () => {
-  const [site, pubs] = await Promise.all(['site', 'publications'].map(load));
+  const [site, pubs] = await Promise.all(['site', 'publications'].map(n => load(n)));
   setPageHead(site, t('pubs_title'), t('pubs_sub'), 'assets/img/site/bg-3.jpg');
 
   const years = [...new Set(pubs.map(p => p.year))].sort((a, b) => b - a);
@@ -418,6 +430,11 @@ async function render() {
     const site = await (pages[page] || pages.index)();
     buildHeader(site);
     buildFooter(site);
+    if (loadWarnings.length) {
+      const box = el('div', 'load-warning',
+        '內容檔讀取失敗，該區塊暫時空白：<br>' + loadWarnings.map(esc).join('<br>'));
+      document.querySelector('main').prepend(box);
+    }
     document.title = `${document.body.dataset.title ? t(document.body.dataset.title) + ' — ' : ''}${pick(site, 'lab_name')}`;
   } catch (err) {
     console.error(err);
